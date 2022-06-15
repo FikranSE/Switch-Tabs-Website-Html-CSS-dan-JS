@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Macondo&family=Merriweather:wght@300;700&family=Montserrat:wght@500&family=Neonderthaw&family=Pacifico&family=Paytone+One&family=Plus+Jakarta+Sans:wght@800&family=Poppins:wght@300;500;700&family=Raleway:wght@200;400&family=Varela+Round&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height:100vh;
+    /* overflow: hidden; */
+}
+#header{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+header{
+    width:70%;
+    height:90px;
+    display:flex;
+    justify-content: space-around;
+    align-items: end;
+    column-gap:100px;
+}
+
+.logo h3{
+    color:#293462;
+    font-size:40px;
+}
+nav{
+    position:relative;
+    transition:all 0.3s ease;
+}
+nav ul{
+    display:flex;
+    list-style: none;
+    column-gap:20px;
+}
+nav ul li{
+    padding:10px;
+    cursor:pointer;
+    color:#293462;
+    border-radius:2px;
+    transition:all 0.3s ease;
+}
+nav ul li:hover{
+    color:#F24C4C;
+}
+.toggle{
+    cursor:pointer;
+    display:none;
+}
+.toggle span{
+    display:block;
+    width:20px;
+    height:3px; 
+    background-color:#F24C4C;
+    margin:3px 0;
+    transition:all 0.3s ease;
+}
+
+.toggle-js span:nth-child(2){
+    width:15px
+    
+}
+
+.toggle-js span:nth-child(3){
+    width:10px;
+}
+.nav-js{
+    height:30%
+}
+.box-section{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:30px;
+}
+.container{
+    width:70%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, auto));
+    gap:20px;
+    grid-template-rows:repeat(auto-fit, auto);
+    justify-content: center;
+}
+img{
+    width:100%;
+    height:200px;
+    width:300px;
+    border-radius:5px;
+    object-fit:cover;
+}
+#holiday{
+    display:none;
+}
+#programming{
+    display:none;
+}
+#friends{
+    display:none;
+}
+
+@media screen and (max-width:1076px){
+    .logo h3{
+        font-size:30px;
+    }
+    header{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+@media screen and (max-width:572px){
+    nav ul{
+        column-gap:5px;
+    }
+}
+@media screen and (max-width:425px){
+
+    nav ul li a{
+        font-size:13px;
+    }
+    .toggle{
+        display:block;
+    }
+    nav{
+        position:absolute;
+        width:100%;
+        height:30%;
+        top:13.3%;
+        height:0;
+        background-color:#fff;
+        border-bottom:1px solid #ccc;
+        overflow:hidden;
+    }
+    nav ul{
+        flex-direction:column;
+    }
+    img{
+        width:100%;
+    }
+}
+
+
+

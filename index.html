@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Tabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <header>
+            <div class="logo">
+                <h3>FIKRAN SE</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li class="btn1" onclick="activeBtn1();">University</li>
+                    <li class="btn2" onclick="activeBtn2();">Holiday</li>
+                    <li class="btn3" onclick="activeBtn3();">Programming</li>
+                    <li class="btn4" onclick="activeBtn4();">Friends</li>
+                    
+                </ul>
+            </nav>
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+    </section>
+    <section id="university" class="box-section">
+        <div class="container">
+            <img src="img/p1.jpg">
+            <img src="img/p4.jpg">
+            <img src="img/p8.jpg">
+            <img src="img/p9.jpg">
+            <img src="img/p11.jpg">
+            <img src="img/p12.jpg">
+        </div>
+    </section>
+    <section id="holiday" class="box-section">
+        <div class="container">
+            <img src="img/1.jpg">
+            <img src="img/4.jpg">
+            <img src="img/2.jpg">
+            <img src="img/c3.jpg">
+            <img src="img/c4.jpg">
+        </div>
+    </section>
+    <section id="programming" class="box-section">
+        <div class="container">
+            <img src="img/c1.jpg">
+            <img src="img/c2.jpg">
+            <img src="img/c8.jpg">
+            <img src="img/c6.jpg">
+            <img src="img/c5.jpg">
+            <img src="img/c4.jpg">
+        </div>
+    </section>
+    <section id="friends" class="box-section">
+        <div class="container">
+            <img src="p3.jpg">
+            <img src="p6.jpg">
+            <img src="p7.jpg">
+            <img src="p8.jpg">
+            <img src="p13.jpg">
+        </div>
+    </section>
+</body>
+<script>
+    const btn1 = document.querySelector('.btn1');
+    const btn2 = document.querySelector('.btn2');
+    const btn3 = document.querySelector('.btn3');
+    const btn4 = document.querySelector('.btn4');
+    const toggle = document.querySelector('.toggle');
+    const nav = document.querySelector('nav');
+    const university = document.getElementById('university');
+    const holiday = document.getElementById('holiday');
+    const programming = document.getElementById('programming');
+    const friends = document.getElementById('friends');
+    
+    toggle.addEventListener('click',()=>{
+        toggle.classList.toggle('toggle-js');
+        nav.classList.toggle('nav-js');
+    })
+
+
+    function activeBtn1(){
+        btn1.style.backgroundColor = '#293462';
+        btn1.style.color = '#F24C4C';
+        btn2.style.backgroundColor = 'transparent';
+        btn3.style.backgroundColor = 'transparent';
+        btn4.style.backgroundColor = 'transparent';
+        university.style.display = 'flex';
+        holiday.style.display = 'none';
+        programming.style.display = 'none';
+        friends.style.display = 'none';
+    }
+    function activeBtn2(){
+        btn2.style.backgroundColor = '#293462';
+        btn2.style.color = '#F24C4C';
+        btn1.style.backgroundColor = 'transparent';
+        btn3.style.backgroundColor = 'transparent';
+        btn4.style.backgroundColor = 'transparent';
+        university.style.display = 'none';
+        holiday.style.display = 'flex';
+        programming.style.display = 'none';
+        friends.style.display = 'none';
+        
+    }
+    function activeBtn3(){
+        btn3.style.backgroundColor = '#293462';
+        btn3.style.color = '#F24C4C';
+        btn2.style.backgroundColor = 'transparent';
+        btn1.style.backgroundColor = 'transparent';
+        btn4.style.backgroundColor = 'transparent';
+        university.style.display = 'none';
+        holiday.style.display = 'none';
+        programming.style.display = 'flex';
+        friends.style.display = 'none';
+    }
+    function activeBtn4(){
+        btn4.style.backgroundColor = '#293462';
+        btn4.style.color = '#F24C4C';
+        btn2.style.backgroundColor = 'transparent';
+        btn3.style.backgroundColor = 'transparent';
+        btn1.style.backgroundColor = 'transparent';
+        university.style.display = 'none';
+        holiday.style.display = 'none';
+        programming.style.display = 'none';
+        friends.style.display = 'flex';
+    }
+</script>
+</html>
